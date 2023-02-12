@@ -1,0 +1,25 @@
+<html>
+ <head>
+ </head>
+ <body>
+   <h1>Liebe<h1>
+
+  <h2>warte andere Antworten...</h2>
+ </body>
+ <script>
+  setInterval(async function() {
+    
+    fetch('answer-wait')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        if (data.released) {
+          window.location.href = '/results'
+        }
+      })
+
+
+  }, 2000);
+
+  </script>
+</html>

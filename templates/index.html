@@ -2,6 +2,17 @@
  <head>
  </head>
  <body>
-   <h1>Hello World<h1>
+   <h1>Liebe<h1>
+
+  <form action="/answer" method="post" >
+    <label for="question">Frage: {{question}}</label>
+    <input type="hidden" name="question" value="{{question}}">
+    <br>
+    <label for="answer">Antwort:</label>
+    <br>
+    <textarea name="answer" rows="4" cols="50"></textarea>
+    <br>
+    <input type="submit" value="Absenden">
+  </form>
  </body>
 </html>
